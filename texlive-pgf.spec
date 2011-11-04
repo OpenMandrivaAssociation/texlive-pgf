@@ -1,3 +1,9 @@
+# revision 22614
+# category Package
+# catalog-ctan /graphics/pgf/base
+# catalog-date 2010-10-27 12:56:09 +0200
+# catalog-license lppl1.3
+# catalog-version 2.10
 Name:		texlive-pgf
 Version:	2.10
 Release:	1
@@ -478,6 +484,7 @@ output.
 %doc %{_texmfdistdir}/source/latex/pgf/testsuite/external/tikzexternaltest.tex
 %doc %{_texmfdistdir}/source/latex/pgf/testsuite/external/tikzexternaltestmakefile.tex
 %doc %{_texmfdistdir}/source/latex/pgf/testsuite/mathtest/pgfmathtestsuite.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -488,3 +495,5 @@ output.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

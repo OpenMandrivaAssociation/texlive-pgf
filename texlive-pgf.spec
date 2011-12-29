@@ -19,9 +19,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-xkeyval
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 PGF is a macro package for creating graphics. It is platform-
@@ -33,20 +30,12 @@ PGF works with plain (pdf-)TeX, (pdf-)LaTeX, and ConTeXt.
 Unlike pstricks, it can produce either PostScript or PDF
 output.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -485,7 +474,6 @@ output.
 %doc %{_texmfdistdir}/source/latex/pgf/testsuite/external/tikzexternaltest.tex
 %doc %{_texmfdistdir}/source/latex/pgf/testsuite/external/tikzexternaltestmakefile.tex
 %doc %{_texmfdistdir}/source/latex/pgf/testsuite/mathtest/pgfmathtestsuite.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -496,5 +484,3 @@ output.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

@@ -6,7 +6,7 @@
 # catalog-version 3.0.0
 Name:		texlive-pgf
 Version:	3.0.0
-Release:	3
+Release:	4
 Summary:	Create PostScript and PDF graphics in TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/base

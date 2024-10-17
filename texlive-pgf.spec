@@ -3,7 +3,7 @@ Version:	59210
 Release:	2
 Summary:	Create PostScript and PDF graphics in TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/base
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/base
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pgf.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pgf.doc.r%{version}.tar.xz

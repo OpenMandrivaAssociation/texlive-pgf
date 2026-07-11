@@ -13,8 +13,6 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pgf.r%{tl_revisi
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pgf.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(atveryend)
 Requires:	texlive(fp)
 Requires:	texlive(graphics)
